@@ -4,109 +4,330 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>プライバシーポリシー | ふところ</title>
+  <style>
+    :root {
+      --main: #4f8f6f;
+      --main-dark: #2f6f52;
+      --accent: #e8f4ec;
+      --bg: #f7faf8;
+      --text: #26332d;
+      --muted: #6b7c72;
+      --card: #ffffff;
+      --border: #dbe8df;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.85;
+    }
+
+    header {
+      background: linear-gradient(135deg, #e8f4ec 0%, #ffffff 100%);
+      padding: 48px 20px 36px;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .logo {
+      width: 72px;
+      height: 72px;
+      margin: 0 auto 16px;
+      border-radius: 22px;
+      background: linear-gradient(135deg, #5fa982, #3f7f60);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 34px;
+      font-weight: 700;
+      box-shadow: 0 12px 24px rgba(63, 127, 96, 0.22);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 30px;
+      letter-spacing: 0.04em;
+    }
+
+    .subtitle {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    main {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 36px 20px 64px;
+    }
+
+    .policy-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 34px;
+      box-shadow: 0 10px 26px rgba(38, 51, 45, 0.06);
+    }
+
+    h2 {
+      margin-top: 36px;
+      margin-bottom: 12px;
+      font-size: 21px;
+      color: var(--main-dark);
+      border-left: 6px solid var(--main);
+      padding-left: 12px;
+    }
+
+    h2:first-of-type {
+      margin-top: 20px;
+    }
+
+    p {
+      margin: 12px 0;
+    }
+
+    ul {
+      margin: 12px 0;
+      padding-left: 1.5em;
+    }
+
+    li {
+      margin: 6px 0;
+    }
+
+    .summary {
+      background: var(--accent);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 20px;
+      color: var(--main-dark);
+      margin-bottom: 28px;
+    }
+
+    .summary p {
+      margin: 0;
+      font-weight: 600;
+    }
+
+    .back {
+      margin-top: 36px;
+      text-align: center;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 24px;
+      background: var(--main);
+      color: white;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+      box-shadow: 0 8px 18px rgba(79, 143, 111, 0.25);
+    }
+
+    .button:hover {
+      background: var(--main-dark);
+    }
+
+    footer {
+      text-align: center;
+      padding: 28px 20px;
+      color: var(--muted);
+      font-size: 13px;
+      border-top: 1px solid var(--border);
+      background: #ffffff;
+    }
+
+    @media (max-width: 760px) {
+      header {
+        padding: 40px 16px 28px;
+      }
+
+      h1 {
+        font-size: 26px;
+      }
+
+      main {
+        padding: 28px 16px 52px;
+      }
+
+      .policy-card {
+        padding: 24px 18px;
+        border-radius: 18px;
+      }
+
+      h2 {
+        font-size: 19px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>プライバシーポリシー</h1>
-  <p>最終更新日：2026年6月21日</p>
-  <p>
-    「ふところ」（以下、「本アプリ」）は、ユーザーのプライバシーを尊重し、
-    個人情報の保護に努めます。
-  </p>
-  <h2>1. 収集する情報</h2>
-  <p>
-    本アプリは、ユーザーの個人情報を収集しません。
-  </p>
-  <p>
-    本アプリで入力された資産情報、カテゴリ情報、履歴情報、
-    アプリ設定情報は開発者へ送信されることはありません。
-  </p>
-  <h2>2. データの保存場所</h2>
-  <p>
-    本アプリで入力されたデータは、ユーザーの端末内に保存されます。
-  </p>
-  <p>
-    保存には端末内のデータベース（SQLite）を使用しています。
-  </p>
-  <p>
-    開発者がユーザーデータへアクセスすることはできません。
-  </p>
-  <h2>3. バックアップ機能</h2>
-  <p>
-    本アプリは、JSON形式によるバックアップおよび復元機能を提供しています。
-  </p>
-  <p>
-    バックアップファイルは、ユーザーが選択した保存先へ保存されます。
-  </p>
-  <p>
-    バックアップファイルが開発者へ送信されることはありません。
-  </p>
-  <p>
-    バックアップファイルの管理は、ユーザー自身の責任で行ってください。
-  </p>
-  <h2>4. 外部通信について</h2>
-  <p>
-    本アプリは、ユーザーデータを外部サーバーへ送信しません。
-  </p>
-  <p>
-    また、以下の機能は利用していません。
-  </p>
-  <ul>
-    <li>広告配信</li>
-    <li>アクセス解析</li>
-    <li>クラッシュレポート収集</li>
-    <li>アカウント連携</li>
-    <li>SNS連携</li>
-  </ul>
-  <h2>5. 第三者提供</h2>
-  <p>
-    本アプリは、ユーザー情報を第三者へ提供しません。
-  </p>
-  <h2>6. セキュリティ</h2>
-  <p>
-    本アプリはユーザーのデータ保護に努めますが、
-    端末の紛失、故障、バックアップファイルの管理不備などによる
-    データ消失について保証するものではありません。
-  </p>
-  <p>
-    重要なデータは定期的にバックアップすることを推奨します。
-  </p>
-  <h2>7. 免責事項</h2>
-  <p>
-    本アプリは、ユーザーによる資産情報の記録および管理を支援することを目的として提供されています。
-  </p>
-  <p>
-    開発者は、本アプリの利用または利用できなかったことにより生じた損害、
-    損失、不利益等について、一切の責任を負いません。
-  </p>
-  <p>
-    また、本アプリの不具合、端末故障、OSアップデート、
-    操作ミス、バックアップ未実施その他の理由によるデータ消失について、
-    開発者は責任を負いません。
-  </p>
-  <p>
-    本アプリで表示される情報の正確性、完全性、有用性について保証するものではありません。
-  </p>
-  <p>
-    重要なデータについては、ユーザー自身の責任において
-    定期的なバックアップを行ってください。
-  </p>
-  <p>
-    本アプリは投資助言、資産運用助言その他の金融アドバイスを提供するものではありません。
-    投資その他の意思決定は、ユーザー自身の判断と責任において行ってください。
-  </p>
-  <h2>8. ポリシーの変更</h2>
-  <p>
-    本プライバシーポリシーは、必要に応じて改定される場合があります。
-  </p>
-  <h2>9. お問い合わせ</h2>
-  <p>
-    本アプリに関するお問い合わせは、以下のメールアドレスまでお願いいたします。
-  </p>
-  <p>
-    メールアドレス：takataka.works@gmail.com
-  </p>
-  <p>
-    <a href="./index.html">トップページへ戻る</a>
-  </p>
+
+  <header>
+    <div class="logo">ふ</div>
+    <h1>プライバシーポリシー</h1>
+    <p class="subtitle">ふところ</p>
+  </header>
+
+  <main>
+    <article class="policy-card">
+
+      <div class="summary">
+        <p>
+          本アプリは、ユーザー登録・ログイン・広告配信・アクセス解析・外部サーバーへのデータ送信を行いません。
+        </p>
+      </div>
+
+      <p>最終更新日：2026年6月21日</p>
+
+      <p>
+        「ふところ」（以下、「本アプリ」）は、ユーザーのプライバシーを尊重し、
+        個人情報の保護に努めます。
+      </p>
+
+      <h2>1. 収集する情報</h2>
+
+      <p>
+        本アプリは、ユーザーの個人情報を収集しません。
+      </p>
+
+      <p>
+        本アプリで入力された資産情報、カテゴリ情報、履歴情報、アプリ設定情報は、
+        開発者へ送信されることはありません。
+      </p>
+
+      <h2>2. データの保存場所</h2>
+
+      <p>
+        本アプリで入力されたデータは、ユーザーの端末内に保存されます。
+      </p>
+
+      <p>
+        保存には端末内のデータベース（SQLite）を使用しています。
+      </p>
+
+      <p>
+        開発者がユーザーデータへアクセスすることはできません。
+      </p>
+
+      <h2>3. バックアップ機能</h2>
+
+      <p>
+        本アプリは、JSON形式によるバックアップおよび復元機能を提供しています。
+      </p>
+
+      <p>
+        バックアップファイルは、ユーザーが選択した保存先へ保存されます。
+      </p>
+
+      <p>
+        バックアップファイルが開発者へ送信されることはありません。
+      </p>
+
+      <p>
+        バックアップファイルの管理は、ユーザー自身の責任で行ってください。
+      </p>
+
+      <h2>4. 外部通信について</h2>
+
+      <p>
+        本アプリは、ユーザーデータを外部サーバーへ送信しません。
+      </p>
+
+      <p>
+        また、以下の機能は利用していません。
+      </p>
+
+      <ul>
+        <li>広告配信</li>
+        <li>アクセス解析</li>
+        <li>クラッシュレポート収集</li>
+        <li>アカウント連携</li>
+        <li>SNS連携</li>
+      </ul>
+
+      <h2>5. 第三者提供</h2>
+
+      <p>
+        本アプリは、ユーザー情報を第三者へ提供しません。
+      </p>
+
+      <h2>6. セキュリティ</h2>
+
+      <p>
+        本アプリはユーザーのデータ保護に努めますが、
+        端末の紛失、故障、バックアップファイルの管理不備などによる
+        データ消失について保証するものではありません。
+      </p>
+
+      <p>
+        重要なデータは定期的にバックアップすることを推奨します。
+      </p>
+
+      <h2>7. 免責事項</h2>
+
+      <p>
+        本アプリは、ユーザーによる資産情報の記録および管理を支援することを目的として提供されています。
+      </p>
+
+      <p>
+        開発者は、法令上認められる範囲において、本アプリの利用または利用できなかったことにより生じた損害、
+        損失、不利益等について責任を負いません。
+      </p>
+
+      <p>
+        また、本アプリの不具合、端末故障、OSアップデート、操作ミス、
+        バックアップ未実施その他の理由によるデータ消失について、
+        開発者は責任を負いません。
+      </p>
+
+      <p>
+        本アプリで表示される情報の正確性、完全性、有用性について保証するものではありません。
+      </p>
+
+      <p>
+        重要なデータについては、ユーザー自身の責任において定期的なバックアップを行ってください。
+      </p>
+
+      <p>
+        本アプリは投資助言、資産運用助言その他の金融アドバイスを提供するものではありません。
+        投資その他の意思決定は、ユーザー自身の判断と責任において行ってください。
+      </p>
+
+      <h2>8. ポリシーの変更</h2>
+
+      <p>
+        本プライバシーポリシーは、必要に応じて改定される場合があります。
+      </p>
+
+      <h2>9. お問い合わせ</h2>
+
+      <p>
+        本アプリに関するお問い合わせは、以下のメールアドレスまでお願いいたします。
+      </p>
+
+      <p>
+        メールアドレス：takataka.works@gmail.com
+      </p>
+
+      <div class="back">
+        <a class="button" href="./index.html">トップページへ戻る</a>
+      </div>
+
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 ふところ</p>
+  </footer>
+
 </body>
 </html>
