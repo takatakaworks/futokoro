@@ -2,22 +2,297 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>ふところ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ふところ | ゆるく続ける資産管理</title>
+  <style>
+    :root {
+      --main: #4f8f6f;
+      --main-dark: #2f6f52;
+      --accent: #e8f4ec;
+      --bg: #f7faf8;
+      --text: #26332d;
+      --muted: #6b7c72;
+      --card: #ffffff;
+      --border: #dbe8df;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.8;
+    }
+
+    header {
+      background: linear-gradient(135deg, #e8f4ec 0%, #ffffff 100%);
+      padding: 64px 20px 48px;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .logo {
+      width: 88px;
+      height: 88px;
+      margin: 0 auto 20px;
+      border-radius: 24px;
+      background: linear-gradient(135deg, #5fa982, #3f7f60);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 40px;
+      font-weight: 700;
+      box-shadow: 0 12px 24px rgba(63, 127, 96, 0.25);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 36px;
+      letter-spacing: 0.08em;
+    }
+
+    .tagline {
+      margin-top: 12px;
+      font-size: 18px;
+      color: var(--main-dark);
+      font-weight: 600;
+    }
+
+    .lead {
+      max-width: 680px;
+      margin: 24px auto 0;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 40px 20px 64px;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin: 0 0 16px;
+      border-left: 6px solid var(--main);
+      padding-left: 12px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 22px;
+      box-shadow: 0 8px 20px rgba(38, 51, 45, 0.05);
+    }
+
+    .card-icon {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+      color: var(--main-dark);
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .feature-list {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: 0 8px 20px rgba(38, 51, 45, 0.05);
+    }
+
+    .feature-list ul {
+      margin: 0;
+      padding-left: 1.4em;
+    }
+
+    .feature-list li {
+      margin: 8px 0;
+    }
+
+    .notice {
+      background: var(--accent);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 22px;
+      color: var(--main-dark);
+    }
+
+    .button-area {
+      text-align: center;
+      margin-top: 32px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 24px;
+      background: var(--main);
+      color: white;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+      box-shadow: 0 8px 18px rgba(79, 143, 111, 0.25);
+    }
+
+    .button:hover {
+      background: var(--main-dark);
+    }
+
+    footer {
+      text-align: center;
+      padding: 28px 20px;
+      color: var(--muted);
+      font-size: 13px;
+      border-top: 1px solid var(--border);
+      background: #ffffff;
+    }
+
+    footer a {
+      color: var(--main-dark);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 760px) {
+      header {
+        padding: 48px 20px 36px;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+
+      .tagline {
+        font-size: 16px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      main {
+        padding: 32px 16px 56px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>ふところ</h1>
-  <p>ゆるく続ける資産管理アプリ</p>
 
-  <ul>
-    <li>オフライン完結</li>
-    <li>口座連携なし</li>
-    <li>広告なし</li>
-    <li>SQLite保存</li>
-    <li>JSONバックアップ対応</li>
-  </ul>
+  <header>
+    <div class="logo">ふ</div>
+    <h1>ふところ</h1>
+    <p class="tagline">ゆるく続ける資産管理</p>
+    <p class="lead">
+      ふところは、あなたのお金とちょうどいい距離感で付き合うための資産管理アプリです。
+      口座連携なし、広告なし、オフライン完結で、資産配分や資産推移をシンプルに見える化します。
+    </p>
+  </header>
 
-  <p>
-    <a href="./privacy.html">プライバシーポリシー</a>
-  </p>
+  <main>
+
+    <section>
+      <h2>ふところについて</h2>
+      <div class="feature-list">
+        <p>
+          「ふところ」は、月に1回程度のゆるい入力で、資産全体のバランスを確認するためのアプリです。
+          日々の細かい家計簿ではなく、資産配分や資産推移を見直すことを目的としています。
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>特徴</h2>
+      <div class="cards">
+        <div class="card">
+          <div class="card-icon">🌱</div>
+          <h3>ゆるく続ける</h3>
+          <p>
+            毎日入力しなくても、月1回の記録で資産の変化を確認できます。
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">📊</div>
+          <h3>資産配分を見える化</h3>
+          <p>
+            円グラフや推移グラフで、ポートフォリオをわかりやすく確認できます。
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">🔒</div>
+          <h3>オフライン完結</h3>
+          <p>
+            口座連携なし、外部サーバー送信なし。データは端末内に保存されます。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>主な機能</h2>
+      <div class="feature-list">
+        <ul>
+          <li>資産カテゴリごとの管理</li>
+          <li>資産配分の円グラフ表示</li>
+          <li>月ごとの資産履歴保存</li>
+          <li>資産推移の確認</li>
+          <li>JSON形式によるバックアップ・復元</li>
+          <li>金額非表示モード</li>
+          <li>テーマ変更</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>プライバシー</h2>
+      <div class="notice">
+        <p>
+          ふところは、ユーザー登録、ログイン、広告配信、アクセス解析、外部サーバーへのデータ送信を行いません。
+          入力されたデータは端末内に保存されます。
+        </p>
+      </div>
+
+      <div class="button-area">
+        <a class="button" href="./privacy.html">プライバシーポリシーを見る</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 ふところ</p>
+    <p><a href="./privacy.html">プライバシーポリシー</a></p>
+  </footer>
+
 </body>
 </html>
