@@ -38,15 +38,15 @@
     }
 
     .logo {
-      width: 88px;
-      height: 88px;
+      width: 96px;
+      height: 96px;
       margin: 0 auto 20px;
-      border-radius: 24px;
+      border-radius: 26px;
       overflow: hidden;
       background: #ffffff;
       box-shadow: 0 12px 24px rgba(63, 127, 96, 0.25);
     }
-    
+
     .logo img {
       width: 100%;
       height: 100%;
@@ -64,31 +64,60 @@
       margin-top: 12px;
       font-size: 18px;
       color: var(--main-dark);
-      font-weight: 600;
+      font-weight: 700;
     }
 
     .lead {
-      max-width: 680px;
+      max-width: 720px;
       margin: 24px auto 0;
       color: var(--muted);
       font-size: 16px;
     }
 
+    nav {
+      margin-top: 28px;
+    }
+
+    nav a {
+      display: inline-block;
+      margin: 6px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      color: var(--main-dark);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      background: var(--accent);
+    }
+
     main {
       max-width: 960px;
       margin: 0 auto;
-      padding: 40px 20px 64px;
+      padding: 44px 20px 64px;
     }
 
     section {
-      margin-bottom: 40px;
+      margin-bottom: 44px;
     }
 
     h2 {
       font-size: 24px;
-      margin: 0 0 16px;
+      margin: 0 0 18px;
       border-left: 6px solid var(--main);
       padding-left: 12px;
+    }
+
+    .panel {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 26px;
+      box-shadow: 0 8px 20px rgba(38, 51, 45, 0.05);
     }
 
     .cards {
@@ -123,20 +152,12 @@
       font-size: 14px;
     }
 
-    .feature-list {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 24px;
-      box-shadow: 0 8px 20px rgba(38, 51, 45, 0.05);
-    }
-
-    .feature-list ul {
+    ul {
       margin: 0;
       padding-left: 1.4em;
     }
 
-    .feature-list li {
+    li {
       margin: 8px 0;
     }
 
@@ -150,7 +171,7 @@
 
     .button-area {
       text-align: center;
-      margin-top: 32px;
+      margin-top: 28px;
     }
 
     .button {
@@ -180,6 +201,7 @@
     footer a {
       color: var(--main-dark);
       text-decoration: none;
+      margin: 0 8px;
     }
 
     footer a:hover {
@@ -204,7 +226,11 @@
       }
 
       main {
-        padding: 32px 16px 56px;
+        padding: 34px 16px 56px;
+      }
+
+      .panel {
+        padding: 22px;
       }
     }
   </style>
@@ -215,19 +241,26 @@
     <div class="logo">
       <img src="./icon.png" alt="ふところアプリアイコン">
     </div>
+
     <h1>ふところ</h1>
     <p class="tagline">ゆるく続ける資産管理</p>
+
     <p class="lead">
       ふところは、あなたのお金とちょうどいい距離感で付き合うための資産管理アプリです。
       口座連携なし、広告なし、オフライン完結で、資産配分や資産推移をシンプルに見える化します。
     </p>
+
+    <nav>
+      <a href="./privacy.html">プライバシーポリシー</a>
+      <a href="./terms.html">利用規約</a>
+    </nav>
   </header>
 
   <main>
 
     <section>
       <h2>ふところについて</h2>
-      <div class="feature-list">
+      <div class="panel">
         <p>
           「ふところ」は、月に1回程度のゆるい入力で、資産全体のバランスを確認するためのアプリです。
           日々の細かい家計簿ではなく、資産配分や資産推移を見直すことを目的としています。
@@ -237,6 +270,7 @@
 
     <section>
       <h2>特徴</h2>
+
       <div class="cards">
         <div class="card">
           <div class="card-icon">🌱</div>
@@ -250,7 +284,7 @@
           <div class="card-icon">📊</div>
           <h3>資産配分を見える化</h3>
           <p>
-            円グラフや推移グラフで、ポートフォリオをわかりやすく確認できます。
+            円グラフや履歴機能で、ポートフォリオの変化をわかりやすく確認できます。
           </p>
         </div>
 
@@ -266,7 +300,7 @@
 
     <section>
       <h2>主な機能</h2>
-      <div class="feature-list">
+      <div class="panel">
         <ul>
           <li>資産カテゴリごとの管理</li>
           <li>資産配分の円グラフ表示</li>
@@ -280,7 +314,7 @@
     </section>
 
     <section>
-      <h2>プライバシー</h2>
+      <h2>プライバシーへの考え方</h2>
       <div class="notice">
         <p>
           ふところは、ユーザー登録、ログイン、広告配信、アクセス解析、外部サーバーへのデータ送信を行いません。
@@ -297,7 +331,10 @@
 
   <footer>
     <p>&copy; 2026 ふところ</p>
-    <p><a href="./privacy.html">プライバシーポリシー</a></p>
+    <p>
+      <a href="./privacy.html">プライバシーポリシー</a>
+      <a href="./terms.html">利用規約</a>
+    </p>
   </footer>
 
 </body>
