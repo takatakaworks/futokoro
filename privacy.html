@@ -38,15 +38,15 @@
     }
 
     .logo {
-      width: 72px;
-      height: 72px;
+      width: 76px;
+      height: 76px;
       margin: 0 auto 16px;
       border-radius: 22px;
       overflow: hidden;
       background: #ffffff;
       box-shadow: 0 12px 24px rgba(63, 127, 96, 0.22);
     }
-    
+
     .logo img {
       width: 100%;
       height: 100%;
@@ -72,12 +72,26 @@
       padding: 36px 20px 64px;
     }
 
-    .policy-card {
+    .card {
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 22px;
       padding: 34px;
       box-shadow: 0 10px 26px rgba(38, 51, 45, 0.06);
+    }
+
+    .summary {
+      background: var(--accent);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 20px;
+      color: var(--main-dark);
+      margin-bottom: 28px;
+    }
+
+    .summary p {
+      margin: 0;
+      font-weight: 700;
     }
 
     h2 {
@@ -106,28 +120,20 @@
       margin: 6px 0;
     }
 
-    .summary {
-      background: var(--accent);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 20px;
+    a {
       color: var(--main-dark);
-      margin-bottom: 28px;
+      font-weight: 700;
     }
 
-    .summary p {
-      margin: 0;
-      font-weight: 600;
-    }
-
-    .back {
+    .button-area {
       margin-top: 36px;
       text-align: center;
     }
 
     .button {
       display: inline-block;
-      padding: 12px 24px;
+      margin: 6px;
+      padding: 12px 22px;
       background: var(--main);
       color: white;
       border-radius: 999px;
@@ -136,8 +142,15 @@
       box-shadow: 0 8px 18px rgba(79, 143, 111, 0.25);
     }
 
+    .button.secondary {
+      background: #ffffff;
+      color: var(--main-dark);
+      border: 1px solid var(--border);
+      box-shadow: none;
+    }
+
     .button:hover {
-      background: var(--main-dark);
+      opacity: 0.9;
     }
 
     footer {
@@ -162,7 +175,7 @@
         padding: 28px 16px 52px;
       }
 
-      .policy-card {
+      .card {
         padding: 24px 18px;
         border-radius: 18px;
       }
@@ -184,7 +197,7 @@
   </header>
 
   <main>
-    <article class="policy-card">
+    <article class="card">
 
       <div class="summary">
         <p>
@@ -192,7 +205,7 @@
         </p>
       </div>
 
-      <p>最終更新日：2026年6月21日</p>
+      <p>最終更新日：2026年6月23日</p>
 
       <p>
         「ふところ」（以下、「本アプリ」）は、ユーザーのプライバシーを尊重し、
@@ -271,41 +284,18 @@
       <p>
         本アプリはユーザーのデータ保護に努めますが、
         端末の紛失、故障、バックアップファイルの管理不備などによる
-        データ消失について保証するものではありません。
+        データ消失を完全に防止することを保証するものではありません。
       </p>
 
       <p>
-        重要なデータは定期的にバックアップすることを推奨します。
+        重要なデータは、定期的にバックアップすることを推奨します。
       </p>
 
-      <h2>7. 免責事項</h2>
+      <h2>7. 利用規約について</h2>
 
       <p>
-        本アプリは、ユーザーによる資産情報の記録および管理を支援することを目的として提供されています。
-      </p>
-
-      <p>
-        開発者は、法令上認められる範囲において、本アプリの利用または利用できなかったことにより生じた損害、
-        損失、不利益等について責任を負いません。
-      </p>
-
-      <p>
-        また、本アプリの不具合、端末故障、OSアップデート、操作ミス、
-        バックアップ未実施その他の理由によるデータ消失について、
-        開発者は責任を負いません。
-      </p>
-
-      <p>
-        本アプリで表示される情報の正確性、完全性、有用性について保証するものではありません。
-      </p>
-
-      <p>
-        重要なデータについては、ユーザー自身の責任において定期的なバックアップを行ってください。
-      </p>
-
-      <p>
-        本アプリは投資助言、資産運用助言その他の金融アドバイスを提供するものではありません。
-        投資その他の意思決定は、ユーザー自身の判断と責任において行ってください。
+        本アプリの利用条件、免責事項、禁止事項等については、
+        <a href="./terms.html">利用規約</a> をご確認ください。
       </p>
 
       <h2>8. ポリシーの変更</h2>
@@ -324,8 +314,9 @@
         メールアドレス：takataka.works@gmail.com
       </p>
 
-      <div class="back">
+      <div class="button-area">
         <a class="button" href="./index.html">トップページへ戻る</a>
+        <a class="button secondary" href="./terms.html">利用規約を見る</a>
       </div>
 
     </article>
